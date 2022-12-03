@@ -92,11 +92,6 @@ function checkGuess () {
         alert("Not enough letters!")
         return
     }
-// Checks if guess is a word
-    if (!WORDS.includes(guessString)) {
-        alert("Word not in list!")
-        return
-    }
 
     
     for (let i = 0; i < 5; i++) {
