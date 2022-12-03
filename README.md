@@ -1,4 +1,4 @@
-# Wordle-take-home-challenge
+# Wordle Take Home Challenge
 
  - This repo contains beginnings of a Wordle application that I made as part of the application for Limio.
 
