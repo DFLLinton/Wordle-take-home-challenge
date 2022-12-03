@@ -7,7 +7,7 @@ The user stories I created are located in the 'Issues' section of this repo. Of 
 While my focus was largely on this user story, I coded a couple other features so that this could be truly completed. Each time you run the game, a new word is generated and that word can be seen in the console.log.
 
 # Viewing the project
-One can examine a [live version](https://dfllinton.github.io/My-stopwatch/) of the project
+One can examine a [live version](https://dfllinton.github.io/Wordle-take-home-challenge/) of the project
 In addition, you can clone the repo via Github and examine the code itself by following these steps:
 1. Create a new terminal in VSCode
 2. Select the directory you would like to save it in
