@@ -13,6 +13,6 @@ In addition, you can clone the repo via Github and examine the code itself by fo
 2. Select the directory you would like to save it in
 3. Enter the command cd followed by the URL address
 4. Press Enter
-5. Type in the command 'git clone', followed by the URL https://github.com/DFLLinton/My-stopwatch
+5. Type in the command 'git clone', followed by the URL https://github.com/DFLLinton/Wordle-take-home-challenge
 6. Press Enter
 7. Open the folder you selected previously
