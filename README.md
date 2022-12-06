@@ -5,7 +5,7 @@
  - The user stories I created are located in the 'Issues' section of this repo. Of the 7 that I defined, I choose 'Guess Feedback' to focus on. The user story is that players would like to receive feedback on their guesses at that day's word.
  - More specifically, they would like individualised feedback for each letter of their word. This feedback needs to be colour-coded as the original game and declares whether a letter is in the word at all and whether it is in the right position. 
 
- - While my focus was largely on this user story, I coded a couple other features so that this could be truly completed. Each time you run the game, a new word is generated and that word can be seen in the console.log.
+ - While my focus was largely on this user story, I coded a couple other features so that my user story could be truly completed. Each time you run the game, a new word is generated and that word can be seen in the console.log.
 
 # Viewing the project
 One can examine a [live version](https://dfllinton.github.io/Wordle-take-home-challenge/) of the project
