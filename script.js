@@ -1,6 +1,7 @@
-// Creating board and importing words
+// imports dictionary from other javascript file
 import { WORDS } from "./words2.js";
 
+// creates guess variables
 const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
@@ -8,6 +9,7 @@ let nextLetter = 0;
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)]
 console.log(rightGuessString)
 
+// Function that creates the board using rows and boxes
 function initBoard() {
     let board = document.getElementById("game-board");
 
@@ -53,7 +55,7 @@ document.addEventListener("keyup", (e) => {
     }
 })
 
-// Insert letter function
+// Function which takes from user input and adds it to the DOM
 function insertLetter (pressedKey) {
     if (nextLetter === 5) {
         return
@@ -68,7 +70,7 @@ function insertLetter (pressedKey) {
     nextLetter += 1
 }
 
-// Remove letter function
+// Function which deletes part of the user input from the DOM
 function deleteLetter () {
     let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
     let box = row.children[nextLetter - 1]
@@ -78,7 +80,7 @@ function deleteLetter () {
     nextLetter -= 1
 }
 
-// Check guess function
+// Function which compares guess to the correct answer
 function checkGuess () {
     let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
     let guessString = ''
@@ -87,11 +89,7 @@ function checkGuess () {
     for (const val of currentGuess) {
         guessString += val
     }
-// Checks if guess is long enough
-    if (guessString.length != 5) {
-        alert("Not enough letters!")
-        return
-    }
+
 
     
     for (let i = 0; i < 5; i++) {
@@ -100,24 +98,21 @@ function checkGuess () {
         let letter = currentGuess[i]
         
         let letterPosition = rightGuess.indexOf(currentGuess[i])
-        // is letter in the correct guess
         if (letterPosition === -1) {
             letterColor = 'grey'
+            // if letter is not in the word, let the colour be grey
         } else {
-            // now, letter is definitely in word
-            // if letter index and right guess index are the same
-            // letter is in the right position 
             if (currentGuess[i] === rightGuess[i]) {
-                // shade green 
+                // if letter is in same position as word, shade green
                 letterColor = 'green'
             } else {
-                // shade box yellow
+                // if letter is present in word but not in same position, shade yellow
                 letterColor = 'yellow'
             }
 
             rightGuess[letterPosition] = "#"
         }
-
+// Add delay animation
         let delay = 250 * i
         setTimeout(()=> {
             //shade box
@@ -131,13 +126,12 @@ function checkGuess () {
         guessesRemaining -= 1;
         currentGuess = [];
         nextLetter = 0;
-// Informs user of the end of the game
+// If the guess is the same as right string then end functionality
         if (guessesRemaining === 0) {}
     }
-}
-// End of guess function 
+} 
 
-// Changes colour of keys
+// Changes colour of keys on keyboard
 function shadeKeyBoard(letter, color) {
     for (const elem of document.getElementsByClassName("keyboard-button")) {
         if (elem.textContent === letter) {
